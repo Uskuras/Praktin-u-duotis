@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background-color: lightgrey; }
+
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  font-family: 'Lato', sans-serif;
+  background-color: white; }
+  header h2 {
+    font-weight: normal; }

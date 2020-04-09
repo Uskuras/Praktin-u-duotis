@@ -1,0 +1,22 @@
+@use 'mixins';
+
+body {
+    margin: 0;
+    background-color: lightgrey;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    @include font-lato;
+    background-color: white;
+
+    h2 {
+        font-weight: normal;
+    }
+}

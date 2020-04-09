@@ -1,0 +1,9 @@
+@mixin display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-lato {
+    font-family: 'Lato', sans-serif;
+}
