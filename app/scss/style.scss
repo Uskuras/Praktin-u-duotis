@@ -1,22 +1,257 @@
 @import 'mixins';
+@import 'variables';
 
 body {
-    margin: 0;
-    background-color: lightgrey;
+    margin: 0 auto;
+    background-color: $main-background;
+    @include font-lato;
+    max-width: 1180px;
+    overflow-x: hidden;
+
+    p {
+        font-weight: 300;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    button {
+        border-radius: 5px;
+        border: none;
+        background-color: $button-color;
+        color: white;
+        padding: 10px;
+    }
 }
 
 header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include display-flex;
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 70px;
-    @include font-lato;
-    background-color: white;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: $main-background;
+    font-size: 0.9em;
+
+    .header {
+        width: 1080px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     h2 {
-        font-weight: normal;
+        margin: auto 0;
+    }
+}
+
+main {
+    @include display-flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .box1 {
+        @include display-flex;
+        color: white;
+        font-size: 1.5em;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(/nuotraukos/bg-masthead.jpg);
+        background-size: cover;
+
+        .subscribe {
+            width: 900px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        input {
+            width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .big-button {
+            padding: 10px 30px;
+            margin-left: 10px;
+        }
+    }
+
+    .box2 {
+        @include display-flex;
+        width: 1080px;
+        background-color: $main-background;
+
+        img {
+            width: 75px;
+            height: 75px;
+        }
+
+        .three-boxes {
+            text-align: center;
+            padding: 100px 50px;
+        }
+    }
+
+    .box3 {
+        @include display-flex;
+        flex-direction: column;
+
+        .box3-box {
+            width: 50vw;
+            height: 500px;
+            background-color: white;
+        }
+
+        .box3-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px 120px;
+            font-size: 1.2em;
+
+            p {
+                margin-top: 10px;
+            }
+        }
+
+        > div {
+            display: flex;
+            flex-direction: row;
+        } 
+
+        > div:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .box4 {
+        @include display-flex;
+        flex-direction: column;
+        width: 1080px;
+        padding: 20px;
+
+        > h2 {
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 1px 3px 5px grey;
+        }
+
+        .box4-container {
+            @include display-flex;
+
+            .three-boxes {
+                @include display-flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 50px;
+            }
+        }
+    }
+
+    .box5 {
+        @include display-flex;
+        color: white;
+        font-size: 1.4em;
+        width: 100vw;
+        height: 300px;
+        background-image: url(/nuotraukos/bg-masthead.jpg);
+        background-position: center;
+        background-size: cover;
+
+        .subscribe {
+            width: 900px;
+            text-align: center;
+            font-weight: bolder;
+
+            h2 {
+                margin-bottom: 30px;
+                margin-top: 0;
+            }
+
+            input {
+                width: 400px;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+            }
+
+            .big-button {
+                padding: 10px 30px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    @include display-flex;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: $main-background;
+    font-size: 0.9em;
+
+    .footer {
+        @include display-flex;
+        width: 1080px;
+
+        .footer-left {
+            width: 1080px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            menu {
+
+                padding: 0;
+                margin: 0;
+
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    padding: 0;
+
+                    li {
+                        padding-right: 20px;
+
+                        a {
+                            text-decoration: none;
+                            color: $button-color;
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+
+            p {
+                margin: 0;
+                font-size: 0.9em;
+            }
+        }
+
+        .footer-right {
+            @include display-flex;
+
+            a {
+
+                img {
+
+                height: 40px;
+                margin-left: 40px;
+                }
+            }
+        }
     }
 }
