@@ -5,7 +5,6 @@ body {
     margin: 0 auto;
     background-color: $main-background;
     @include font-lato;
-    max-width: 1180px;
     overflow-x: hidden;
 
     p {
@@ -37,7 +36,7 @@ header {
 
     .header {
         width: 1080px;
-        padding: 0 20px;
+        padding: 0 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -66,6 +65,7 @@ main {
             width: 900px;
             text-align: center;
             font-weight: bolder;
+            margin: 0 20px;
         }
 
         input {
@@ -77,13 +77,12 @@ main {
 
         .big-button {
             padding: 10px 30px;
-            margin-left: 10px;
         }
     }
 
     .box2 {
         @include display-flex;
-        width: 1080px;
+        max-width: 1080px;
         background-color: $main-background;
 
         img {
@@ -105,6 +104,25 @@ main {
             width: 50vw;
             height: 500px;
             background-color: white;
+        }
+
+        .box3-picture-st {
+            background-image: url("/nuotraukos/bg-showcase-1.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .box3-picture-nd {
+
+            background-image: url("/nuotraukos/bg-showcase-2.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .box3-picture-rd {
+            background-image: url("/nuotraukos/bg-showcase-3.jpg");
+            background-position: center;
+            background-size: cover;
         }
 
         .box3-text {
@@ -133,7 +151,7 @@ main {
     .box4 {
         @include display-flex;
         flex-direction: column;
-        width: 1080px;
+        max-width: 1080px;
         padding: 20px;
 
         > h2 {
@@ -148,13 +166,16 @@ main {
         }
 
         .box4-container {
-            @include display-flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
 
             .three-boxes {
                 @include display-flex;
                 flex-direction: column;
                 text-align: center;
-                padding: 30px 50px;
+                padding: 50px;
             }
         }
     }
@@ -179,16 +200,18 @@ main {
                 margin-top: 0;
             }
 
-            input {
-                width: 400px;
-                padding: 10px;
-                border-radius: 5px;
-                border: none;
-            }
+            form {
 
-            .big-button {
-                padding: 10px 30px;
-                margin-left: 10px;
+                input {
+                    width: 400px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+                .big-button {
+                    padding: 10px 30px;
+                }
             }
         }
     }
@@ -196,19 +219,19 @@ main {
 
 footer {
     @include display-flex;
-    bottom: 0;
     width: 100%;
     height: 200px;
     background-color: $main-background;
     font-size: 0.9em;
 
     .footer {
-        @include display-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 1080px;
+        margin: 0 20px;
 
         .footer-left {
-            width: 1080px;
-            padding: 0;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -254,4 +277,184 @@ footer {
             }
         }
     }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+    main .box3 .box3-box {
+        height: 350px;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 999px) {
+    main .box3 .box3-box {
+        height: 300px;
+    }
+
+    main .box3 .box3-text {
+        font-size: 1em;
+        padding: 20px 80px;
+    }
+}
+
+@media (max-width: 849px) {
+    main {
+        max-width: 280px;
+
+        .box1 {
+
+            .subscribe {
+                max-width: 280px;
+
+                .text-box1 {
+                    margin: 0 auto;
+                    max-width: 260px;
+                }
+
+                h1 {
+                    margin-top: 0;
+                    font-size: 1.2em;
+                }
+            }
+
+            form {
+                input {
+                    margin-top: 10px;
+                    width: 260px;
+                    height: 20px;
+                    font-size: 0.7em;
+                }
+            }
+
+            .big-button {
+                width: 280px;
+                height: 40px;
+                margin-top: 10px;
+            }
+        }
+
+        .box2 {
+            flex-direction: column;
+            max-width: 280px;
+            padding: 50px 0;
+
+            .three-boxes {
+                padding: 30px 20px;
+                font-size: 1.2em;
+            }
+        }
+
+        .box3 {
+
+            > div:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+
+            .box3-box {
+                width: 100vw;
+                height: 50vh;
+                background-color: white;
+            }
+
+            .box3-text {
+                margin: 0;
+                padding: 40px;
+                font-size: 1.1em;
+
+                p {
+                    font-size: 0.9em;
+                }
+            }
+
+            .box3-all {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .box4 {
+            text-align: center;
+
+            .box4-container {
+                flex-direction: column;
+            }
+        }
+
+        .box5 {
+            height: 450px;
+
+            .subscribe {
+                max-width: 280px;
+
+                .text-box5 {
+                    max-width: 260px;
+                    margin: 0 auto;
+
+                    h1 {
+                        font-size: 1.2em;
+                    }
+                }
+
+                form {
+                    input {
+                        margin-top: 10px;
+                        height: 20px;
+                        width: 260px;
+                        font-size: 0.7em;
+                    }
+
+                    .big-button {
+                        width: 280px;
+                        height: 40px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        height: 250px;
+    
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+    
+            .footer-left {
+                align-items: center;
+
+                menu {
+                    max-width: 300px;
+
+                    ul {
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        
+                        li {
+                            padding: 10px 0;
+                        }
+
+                    }
+                }
+    
+                p {
+                    margin: 0;
+                    font-size: 0.9em;
+                }
+            }
+    
+            .footer-right {
+    
+                a {
+                    margin: 30px 0;
+    
+                    img {
+    
+                    height: 40px;
+                    margin-left: 40px;
+                    }
+                }   
+            }
+        }
+    }
+
 }
