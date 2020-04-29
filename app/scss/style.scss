@@ -176,6 +176,7 @@ main {
                 flex-direction: column;
                 text-align: center;
                 padding: 50px;
+                width: 250px;
             }
         }
     }
@@ -285,18 +286,41 @@ footer {
     }
 }
 
-@media (min-width: 850px) and (max-width: 999px) {
-    main .box3 .box3-box {
-        height: 300px;
-    }
+@media (min-width: 651px) and (max-width: 999px) {
+    main {
+        .box3 {
+            .box3-box {
+            height: 300px;
+            }
 
-    main .box3 .box3-text {
-        font-size: 1em;
-        padding: 20px 80px;
+            .box3-text {
+            font-size: 1em;
+            padding: 20px 40px;
+            }
+        }
+
+        .box4 {
+
+            .box4-container { 
+                align-items: flex-start;
+
+                img {
+                    width: 130px;
+                }
+
+                h2 {
+                    font-size: 1.3em;
+                }
+
+                .three-boxes {
+                    width: 130px;
+                }
+            }
+        }
     }
 }
 
-@media (max-width: 849px) {
+@media (max-width: 650px) {
     main {
         max-width: 280px;
 
